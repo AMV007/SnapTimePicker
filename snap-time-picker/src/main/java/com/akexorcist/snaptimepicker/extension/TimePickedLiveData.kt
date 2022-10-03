@@ -22,11 +22,11 @@ class TimePickedLiveData<T> : MutableLiveData<T>() {
         }
 
         // Observe the internal MutableLiveData
-        super.observe(owner, { value ->
+        super.observe(owner) { value ->
             if (mPending.compareAndSet(true, false)) {
                 observer.onChanged(value)
             }
-        })
+        }
     }
 
     @MainThread

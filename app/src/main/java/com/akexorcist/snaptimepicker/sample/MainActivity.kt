@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 setPrefix(R.string.time_prefix)
                 setSuffix(R.string.time_suffix)
                 setThemeColor(R.color.colorAccent)
-                setTitleColor(R.color.colorWhite)
+                setTitleColor(R.color.colorBlack)
                 setNegativeButtonColor(android.R.color.holo_red_dark)
                 setPositiveButtonColor(android.R.color.holo_blue_bright)
                 setButtonTextAllCaps(false)

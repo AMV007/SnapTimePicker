@@ -9,6 +9,7 @@
             android:id="@+id/textViewNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
             android:layout_marginStart="@dimen/snap_time_picker_margin_padding"
             android:layout_marginTop="@dimen/snap_time_picker_margin_padding"
             android:layout_marginEnd="@dimen/snap_time_picker_margin_padding"

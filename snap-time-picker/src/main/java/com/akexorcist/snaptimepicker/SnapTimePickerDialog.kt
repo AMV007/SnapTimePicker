@@ -117,10 +117,10 @@ class SnapTimePickerDialog : BaseSnapTimePickerDialogFragment() {
 
     override fun prepare() {
         run {
-            hourAdapter = TimePickerAdapter()
-            minuteAdapter = TimePickerAdapter()
-            hourLayoutManager = LinearLayoutManager(context)
-            minuteLayoutManager = LinearLayoutManager(context)
+            hourAdapter = TimePickerAdapter(binding.recyclerViewHour)
+            minuteAdapter = TimePickerAdapter(binding.recyclerViewMinute)
+            hourLayoutManager = ZoomCenterCardLayoutManager(context)
+            minuteLayoutManager = ZoomCenterCardLayoutManager(context)
             hourSnapHelper = LinearSnapHelper()
             minuteSnapHelper = LinearSnapHelper()
             binding.recyclerViewHour.layoutManager = hourLayoutManager

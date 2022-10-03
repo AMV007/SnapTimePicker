@@ -1,12 +1,16 @@
 package com.akexorcist.snaptimepicker
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.akexorcist.snaptimepicker.databinding.LayoutSnapTimePickerNumberItemBinding
+import com.akexorcist.snaptimepicker.extension.getCurrentPosition
 
-class TimePickerAdapter : RecyclerView.Adapter<TimeNumberViewHolder>() {
+class TimePickerAdapter(val view:RecyclerView) : RecyclerView.Adapter<TimeNumberViewHolder>() {
     private var itemList: List<Int>? = null
+    var selectedPosition = 0 // You have to set this globally in the Adapter class
+
 
     override fun onCreateViewHolder(parent: ViewGroup, type: Int): TimeNumberViewHolder =
         TimeNumberViewHolder(

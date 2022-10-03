@@ -9,7 +9,7 @@
             android:layout_width="@dimen/snap_time_picker_dialog_width"
             android:layout_height="@dimen/snap_time_picker_dialog_height"
             android:layout_gravity="center"
-            android:background="@drawable/snap_time_picker_shape_background_white">
+            android:background="@drawable/snap_time_picker_shape_background_black">
 
         <TextView
                 android:id="@+id/text_view_title"
@@ -68,6 +68,7 @@
         <View
                 style="@style/SnapTimePicker.HorizontalDivider"
                 android:layout_width="0dp"
+                android:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@id/view_selected_value_area"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -75,11 +76,33 @@
         <View
                 style="@style/SnapTimePicker.HorizontalDivider"
                 android:layout_width="0dp"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/view_selected_value_area" />
 
+        <View
+            android:id="@+id/view_selected_value_area_left"
+            android:layout_width="@dimen/snap_time_picker_selected_value_width_around"
+            android:layout_height="@dimen/snap_time_picker_selected_area_height"
+            android:layout_gravity="left"
+            android:background="@drawable/layout_bg"
+            app:layout_constraintBottom_toBottomOf="@id/view_selected_value_area"
+            app:layout_constraintEnd_toStartOf="@id/view_selected_value_area_divider"
+            app:layout_constraintTop_toTopOf="@id/view_selected_value_area" />
+
+        <View
+            android:id="@+id/view_selected_value_area_right"
+            android:layout_width="@dimen/snap_time_picker_selected_value_width_around"
+            android:layout_height="@dimen/snap_time_picker_selected_area_height"
+            android:layout_gravity="right"
+            android:background="@drawable/layout_bg"
+            app:layout_constraintBottom_toBottomOf="@id/view_selected_value_area"
+            app:layout_constraintStart_toEndOf="@id/view_selected_value_area_divider"
+            app:layout_constraintTop_toTopOf="@id/view_selected_value_area" />
+
         <TextView
+                android:id="@+id/view_selected_value_area_divider"
                 style="@style/SnapTimePicker.Content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -98,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/snap_time_picker_margin_padding_extra_extra_small"
                 android:gravity="center"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="@id/view_selected_value_area"
                 app:layout_constraintEnd_toStartOf="@id/layout_time_container"
                 app:layout_constraintTop_toTopOf="@id/view_selected_value_area" />
@@ -109,6 +133,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/snap_time_picker_margin_padding_extra_extra_small"
                 android:gravity="center"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="@id/view_selected_value_area"
                 app:layout_constraintStart_toEndOf="@id/layout_time_container"
                 app:layout_constraintTop_toTopOf="@id/view_selected_value_area" />
@@ -123,7 +148,7 @@
         <View
                 android:layout_width="0dp"
                 android:layout_height="@dimen/snap_time_picker_recycler_view_shadow_height"
-                android:background="@drawable/snap_time_picker_shadow_bottom_translucent_white"
+                android:background="@drawable/snap_time_picker_shadow_bottom_translucent_black"
                 app:layout_constraintBottom_toBottomOf="@id/layout_time_container"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -131,7 +156,7 @@
         <View
                 android:layout_width="0dp"
                 android:layout_height="@dimen/snap_time_picker_recycler_view_shadow_height"
-                android:background="@drawable/snap_time_picker_shadow_top_translucent_white"
+                android:background="@drawable/snap_time_picker_shadow_top_translucent_black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/layout_time_container" />

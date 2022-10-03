@@ -9,7 +9,7 @@
     </style>
 
     <style name="SnapTimePicker.Content">
-        <item name="android:textColor">@color/snap_time_picker_black</item>
+        <item name="android:textColor">@color/snap_time_picker_white</item>
         <item name="android:textSize">@dimen/snap_time_picker_text_size_medium</item>
     </style>
 
